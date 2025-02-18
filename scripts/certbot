@@ -1,0 +1,3 @@
+#!/bin/bash
+source /opt/certbot/bin/activate
+/opt/certbot/bin/certbot "$@"

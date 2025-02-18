@@ -1,0 +1,8 @@
+[Unit]
+Description=Certbot
+Documentation=https://certbot.eff.org/docs
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "source /opt/cerbot/bin/activate; certbot -q renew"
+PrivateTmp=true
