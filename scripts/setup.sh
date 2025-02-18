@@ -53,6 +53,10 @@ find /var/www -type f -exec chmod 0664 {} \;
 echo "Adding ec2-user to apache group ..."
 usermod -a -G apache ec2-user
 
+# Install VirtualHost *:80 config for CertBot to use later
+cp httpd/conf.d/certbot.conf /etc/httpd/conf.d/
+chmod 644 /etc/httpd/conf.d/certbot.conf
+
 # Install Certbot via pip for HTTPS
 echo "Installing CertBot via pip ..."
 dnf remove certbot
