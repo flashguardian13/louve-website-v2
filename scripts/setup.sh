@@ -70,7 +70,7 @@ echo "Enabling SSL via CertBot ..."
 certbot run \
     --non-interactive \
     --keep \
-    --email '$1' \
+    --email "$1" \
     --domains "rhiannonlouve.com,www.rhiannonlouve.com" \
     --agree-tos \
     --apache
