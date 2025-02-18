@@ -67,7 +67,13 @@ cp scripts/certbot /usr/bin/
 
 # Install SSL Certs and enable HTTPS for Apache using Certbot
 echo "Enabling SSL via CertBot ..."
-certbot --apache -n -m '$1' --agree-tos
+certbot run \
+    --non-interactive \
+    --keep \
+    --email '$1' \
+    --domains "rhiannonlouve.com,www.rhiannonlouve.com" \
+    --agree-tos \
+    --apache
 
 # Set up automatic cert renewal
 # https://unix.stackexchange.com/a/744641/245955
