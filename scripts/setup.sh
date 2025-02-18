@@ -16,12 +16,14 @@ fi
 # Install Packages
 # augeas-libs: for CertBot
 # httpd: Apache, for serving files to the web
+# mod_ssl: for CertBot
 # python3: for CertBot via pip
 echo "Installing packages ..."
 dnf update -y
 dnf install -y \
     augeas-libs \
     httpd \
+    mod_ssl \
     python3
 
 # Run Apache and always run Apache
