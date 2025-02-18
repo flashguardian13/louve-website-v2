@@ -29,6 +29,9 @@ systemctl enable httpd
 
 # Go to repository (checked out via user data script)
 cd ~/louve-website-v2
+git remote update
+git checkout main
+git pull --ff-only
 
 # Install webserver files
 rsync -aq var/www/ /var/www
