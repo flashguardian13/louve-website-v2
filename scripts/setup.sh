@@ -54,6 +54,7 @@ echo "Adding ec2-user to apache group ..."
 usermod -a -G apache ec2-user
 
 # Install VirtualHost *:80 config for CertBot to use later
+echo "Configuring VirtualHost on port 80 for CertBot to use ..."
 cp httpd/conf.d/certbot.conf /etc/httpd/conf.d/
 chmod 644 /etc/httpd/conf.d/certbot.conf
 
